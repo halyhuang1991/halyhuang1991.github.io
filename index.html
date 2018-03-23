@@ -21,7 +21,7 @@ td {
     border: #c0c0c0 1px solid;
     white-space: nowrap;
 }
-	tr.table_head	{
+	tr:first-child	{
 	    font-weight: bold;
             text-align: center;
             border: 1px solid #c0c0c0; /*border-top: 1px solid #AED0EA;/*#125088*/
@@ -29,10 +29,10 @@ td {
             white-space: nowrap;
 	}
 
-tr:nth-child(odd):not(.table_head) {
+tr:nth-child(odd):not(:first-child) {
 	background-color: #F8EED2;
 }
-tr:nth-child(odd):not(.table_head):hover {
+tr:nth-child(odd):not(:first-child):hover {
 	background-color: #B9ADAF;
 }
 tr:not(.table_head):hover{
