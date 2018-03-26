@@ -1,4 +1,4 @@
-
+[
              {
                 username: 'aaaaa',
                 email: '123@qq.com',
@@ -23,4 +23,4 @@
                 province: '广东省',
                 hobby: ['乒乓球', '读书', '编程']
             }
-  
+ ]
