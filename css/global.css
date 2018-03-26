@@ -4,3 +4,10 @@ body {
     font-size: 0.8em;
     font-family: Arial,Verdana,sans-serif !important;
 }	
+table {
+	font-size: 1em;
+}
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
