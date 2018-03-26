@@ -11,3 +11,19 @@ table {
 .ui-draggable, .ui-droppable {
 	background-position: top;
 }
+.clear {
+    clear: both;
+}
+li {
+    list-style: none;
+}
+li .text {
+    width: 80%;
+    text-align: left;
+    line-height: 30px;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
