@@ -12,8 +12,9 @@
 <script src="../script/jquery.layout.js"></script>
 
 <script type="text/javascript">
-$(function () {
-            var myLayout = $("body").layout(
+ var j = jQuery.noConflict();
+j(function () {
+            var myLayout = j("body").layout(
             {
                 applyDefaultStyles: true,//应用默认样式  
                 scrollToBookmarkOnLoad: false,//页加载时滚动到标签  
