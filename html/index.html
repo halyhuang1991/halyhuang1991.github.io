@@ -11,8 +11,20 @@
 <script src="../script/jquery.js"></script>
 <script src="../script/jquery.layout.js"></script>
 <style>
+ li div.form{
+  display:inline;
+  width:100%
+ }
+ li div.form div{
+   float:left
+ }
  li .icon{
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABIElEQVQ4jc2TwUvCYBjG/RO9C9F5twlJh5EQrUPBINiXS+ZAJsQ3hlPXTFq5WksEpRAhKjrlJYSEIKJIeLp9Yy3DsUsPPLf3/T0vD7yZzL9Q4FTgt8rwrH2cmXtwDQmdwx04ugi7uommtgFLFVA/WIdZWoNB8qAyDwbw7TIex1d4GPm4u/FwOzzFuH+MUc/GtV/HoEvRP6mh16ni8kjFRUuBurUSAs6bJQy6lA0GbQ2eReAaEhxdREMVYCoFUJlnJsVcCAjaGpbR58c7s8BlQ4BnEQCAucvF/NvybDqJAlxDWjp5Np3EAY4uRhYq26t/OgZoqEK6DkylkK4DKvPpOvgJSNzBogvm8y+W/Pb6wtKfn+6jAFLMQeCyiZ3s4xboG6jsTdCLN8OcAAAAAElFTkSuQmCC") no-repeat center !important;
+  width: 10%;
+  height: 0.01px;
+  background-image: url(&quot;data:image/gif;base64,R0lGODlhAwADAIAAAP///8zMzCH5BAAAAAAALAAAAAADAAMAAAIEBHIJBQA7&quot;);
+  border: 1px solid gray;
+  padding: 10px;
+  float:left
  }
  </style>
 <script type="text/javascript">
@@ -113,7 +125,7 @@ j(function () {
                    <div>
                      <ul>
                        <li class="menu_row" style="width:98%;height:10px">
-                        <div style="width:98%;height:98%">
+                        <div class="form" style="width:98%;height:98%">
                           <div class="icon"></div>
                           <div class="text" title="Supplier">Supplier</div>
                           <div class="clear"></div>
