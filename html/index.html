@@ -84,13 +84,39 @@ j(function () {
 </script>
 <script src="../jquery.min.js"></script>
 <script src="../script/jquery-ui.min.js"></script>
+ <script type="text/javascript">
+  $(function() {
+    $( "#accordion" ).accordion();
+  });
+  </script>
 </head>
 <body>
 
   <div class="ui-layout-center">center</div>
   <div class="ui-layout-north">North</div>
   <div class="ui-layout-south">South</div>
-  <div class="ui-layout-west" >west</div>
+  <div class="ui-layout-west" >
+          <div id="accordion">
+                   <h3>部分 1</h3>
+                   <div>
+                     <p>
+                     Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                     ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                     amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                     odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                     </p>
+                   </div>
+                   <h3>部分 2</h3>
+                   <div>
+                     <p>
+                     Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                     purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                     velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                     suscipit faucibus urna.
+                     </p>
+                   </div>
+           </div>
+ </div>
  
 <script type="text/javascript">
 
