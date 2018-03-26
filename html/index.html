@@ -156,7 +156,7 @@ j(function () {
 $(function(){
  $("#accordion").find("div.form").click(function(){
     var target=$(this).find("div.text").attr('target');
-    var html= "<div id='iframerow_" + traget + "' class='iframe-row'><iframe traget='" + traget + "' title='test' src='../index.html?menuid='+traget frameborder='no' border='0'></iframe></div>";
+    var html= "<div id='iframerow_" + target + "' class='iframe-row'><iframe traget='" + target + "' title='test' src='../index.html?menuid='+traget frameborder='no' border='0'></iframe></div>";
     $("div#iframerows").append(html);
     $('#iframerow_" + traget + "').show();
     $('#iframerow_" + traget + "').siblings().hide();
