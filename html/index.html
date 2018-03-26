@@ -86,8 +86,14 @@ j(function () {
 <script src="../script/jquery-ui.min.js"></script>
  <script type="text/javascript">
   $(function() {
+   var icons = {
+      header: "ui-icon-circle-arrow-e",
+      activeHeader: "ui-icon-circle-arrow-s"
+    };
     $( "#accordion" ).accordion({
-      collapsible: true
+      collapsible: true,
+      icons: icons,
+      heightStyle: "fill"
     });
   });
   </script>
