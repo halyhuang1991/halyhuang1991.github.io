@@ -157,7 +157,7 @@ $(function(){
  $("#accordion").find("div.form").click(function(){
     var target=$(this).find("div.text").attr('target');
     
-    if($("div#iframerows").find('#iframerow_" + target + "').length==0){
+    if($("div#iframerows").find('#iframerow_' + target).length==0){
       var html= "<div id='iframerow_" + target + "' class='iframe-row'><iframe target='" + target + "' title='test' src='../index.html?menuid='+target frameborder='no' border='0'></iframe></div>";
       $("div#iframerows").append(html);
     }
