@@ -176,7 +176,7 @@ $(function(){
     $('.ui-layout-center').find('iframe').width(width);
  });
  $("div#iframeheads").find('div').click(function(){
-    var target=$(this).find("div.text").attr('target');
+    var target=$(this).attr('target');
     $('#iframerow_' + target).show();
     $('#iframerow_' + target).siblings('.iframe-row').hide();
  });
