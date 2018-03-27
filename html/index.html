@@ -184,7 +184,7 @@ $(function(){
       $("div#iframeheads").append(head);
     }
     $('#iframerow_' + target).show();
-    $("div#iframeheads").find('div.text[target="' + target+'"').addClass('active');
+    //$("div#iframeheads").find('div.text[target="' + target+'"').addClass('active');
     $('#iframerow_' + target).siblings('.iframe-row').hide();
     var width=$('.ui-layout-center').width();
     $('.ui-layout-center').find('iframe').width(width);
@@ -196,7 +196,7 @@ $(function(){
  $("div#iframeheads").delegate('div','click',function(){
     var target=$(this).attr('target');
     $('#iframerow_' + target).show();
-    $(this).addClass('active');
+    //$(this).addClass('active');
     $('#iframerow_' + target).siblings('.iframe-row').hide();
  });
  $("div#iframeheads").delegate('span.ui-icon-closethick','click',function(event){
