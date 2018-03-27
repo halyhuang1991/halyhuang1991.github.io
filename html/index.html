@@ -175,12 +175,12 @@ $(function(){
     var width=$('.ui-layout-center').width();
     $('.ui-layout-center').find('iframe').width(width);
  });
- $("div#iframeheads").find('div').click(function(){
+ $("div#iframeheads").delegate('div','click',function(){
     var target=$(this).attr('target');
     $('#iframerow_' + target).show();
     $('#iframerow_' + target).siblings('.iframe-row').hide();
  });
- $("div#iframeheads").find('span.ui-icon-closethick').keyup(function(){
+ $("div#iframeheads").delegate('span.ui-icon-closethick','keyup',function(){
     var target=$(this).parent().attr('target');
     $(this).parent().remove();
     $('#iframerow_' + target).remove();
