@@ -180,14 +180,14 @@ $(function(){
     $('#iframerow_' + target).show();
     $('#iframerow_' + target).siblings('.iframe-row').hide();
  });
- $("div#iframeheads").delegate('span.ui-icon-closethick','keyup',function(){
+ $("div#iframeheads").delegate('span.ui-icon-closethick','click',function(event){
     var target=$(this).parent().attr('target');
     $(this).parent().remove();
     $('#iframerow_' + target).remove();
-    if($("div#iframeheads").find('div.iframe-row').length>0){
-      $("div#iframeheads").find('div.iframe-row').eq(0).show();
-      $("div#iframeheads").find('div.iframe-row').eq(0).siblings('.iframe-row').hide();
-    }
+    if($("div#iframeheads").find('div').length>0){
+      $("div#iframeheads").find('div').eq(0).trigger('click');
+    };
+    return false;
  });
  
 });
