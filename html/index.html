@@ -117,7 +117,8 @@ j(function () {
 <body>
 
   <div class="ui-layout-center">
-   <div id="iframerows"></div>
+     <div id="iframeheads" style='display:inline'></div>
+     <div id="iframerows"></div>
  </div>
   <div class="ui-layout-north">North</div>
   <div class="ui-layout-south">South</div>
@@ -160,6 +161,10 @@ $(function(){
     if($("div#iframerows").find('#iframerow_' + target).length==0){
       var html= "<div id='iframerow_" + target + "' class='iframe-row'><iframe target='" + target + "' title='test' src='../index.html?menuid="+target+"' frameborder='no' border='0'></iframe></div>";
       $("div#iframerows").append(html);
+     //---------------------------------------------
+      var title=$(this).find("div.text").attr('title');
+      var head="<div class='text' target='"+target+"'>"+title+"<span class='ui-icon 	ui-icon-closethick'></span></div>";
+      $("div#iframeheads").append(head);
     }
     $('#iframerow_' + target).show();
     $('#iframerow_' + target).siblings('.iframe-row').hide();
