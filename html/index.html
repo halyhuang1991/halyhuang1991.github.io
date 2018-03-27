@@ -40,6 +40,9 @@
      margin-right: 10px;
      background-color: #f9fbf9;
   }
+ .active{
+   background-color: #afdaaf;
+ }
  </style>
 <script type="text/javascript">
  var j = jQuery.noConflict();
@@ -181,6 +184,7 @@ $(function(){
       $("div#iframeheads").append(head);
     }
     $('#iframerow_' + target).show();
+    $('#iframerow_' + target).addClass('active');
     $('#iframerow_' + target).siblings('.iframe-row').hide();
     var width=$('.ui-layout-center').width();
     $('.ui-layout-center').find('iframe').width(width);
@@ -192,6 +196,7 @@ $(function(){
  $("div#iframeheads").delegate('div','click',function(){
     var target=$(this).attr('target');
     $('#iframerow_' + target).show();
+    $('#iframerow_' + target).addClass('active');
     $('#iframerow_' + target).siblings('.iframe-row').hide();
  });
  $("div#iframeheads").delegate('span.ui-icon-closethick','click',function(event){
