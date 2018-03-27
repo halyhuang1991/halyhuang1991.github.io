@@ -163,7 +163,7 @@ $(function(){
       $("div#iframerows").append(html);
      //---------------------------------------------
       var title=$(this).find("div.text").attr('title');
-      var head="<div class='text' target='"+target+"' style='float:left;text-align:center;color: #9c9494;display:block;margin-right: 10px;'>"+title+"<span class='ui-icon 	ui-icon-closethick'></span></div>";
+      var head="<div class='text' target='"+target+"' style='float:left;text-align:center;color: #9c9494;display:block;margin-right: 10px;background-color: #f9fbf9;'>"+title+"<span class='ui-icon 	ui-icon-closethick'></span></div>";
       $("div#iframeheads").append(head);
     }
     $('#iframerow_' + target).show();
@@ -174,6 +174,20 @@ $(function(){
  $('.ui-layout-center').resize(function(){
     var width=$('.ui-layout-center').width();
     $('.ui-layout-center').find('iframe').width(width);
+ });
+ $("div#iframeheads").find('div').click(function(){
+    var target=$(this).find("div.text").attr('target');
+    $('#iframerow_' + target).show();
+    $('#iframerow_' + target).siblings('.iframe-row').hide();
+ });
+ $("div#iframeheads").find('span.ui-icon-closethick').keyup(function(){
+    var target=$(this).parent().attr('target');
+    $(this).parent().remove();
+    $('#iframerow_' + target).remove();
+    if($("div#iframeheads").find('div.iframe-row').length>0){
+      $("div#iframeheads").find('div.iframe-row').eq(0).show();
+      $("div#iframeheads").find('div.iframe-row').eq(0).siblings('.iframe-row').hide();
+    }
  });
  
 });
