@@ -142,7 +142,7 @@ j(function () {
   <div class="ui-layout-west" >
           <div id="accordion">
                    <h3>部分 1</h3>
-                   <div>
+                   <div id='test'>
                      <ul>
                        <li class="menu_row" style="width:98%;height:10px">
                         <div class="form" style="width:98%;height:98%">
@@ -159,7 +159,7 @@ j(function () {
                       </ul>
                    </div>
                    <h3>部分 2</h3>
-                   <div>
+                   <div id='study'>
                      <p>
                      Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
                      purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
@@ -172,7 +172,16 @@ j(function () {
  
 <script type="text/javascript">
 $(function(){
- $("#accordion").find("div.form").click(function(){
+ $.getJSON('../data/json/pages.json',function(data){
+  data.forEach(function(x){
+    var html='<li class="menu_row" style="width:98%;height:10px"><div class="form" style="width:98%;height:98%"><div class="text" title="'+x.title+'" target="'+x.target+'"><span class="ui-icon ui-icon-arrowthick-1-e"></span>'+x.title+'</div></div></li>';
+    if($('#accordion #'+x.part).find('ul').length>0){
+      $('#accordion #'+x.part).find('ul').eq(0).append(html);
+    }
+  });
+  
+ })
+ $("#accordion").delegate("div.form","click",function(){
     var target=$(this).find("div.text").attr('target');
     
     if($("div#iframerows").find('#iframerow_' + target).length==0){
