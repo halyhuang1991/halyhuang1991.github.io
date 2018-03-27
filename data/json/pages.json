@@ -3,12 +3,14 @@
                 "title": "index",
                 "refer": "html",
                 "url":"../index.html",
-                "target": 3
+                "target": 3,
+                "part":"test"
             },
             {
                 "title": "index",
                 "refer": "html",
                 "url":"../index.html",
-                "target": 4
+                "target": 4,
+                "part":"test"
             }
 ]
