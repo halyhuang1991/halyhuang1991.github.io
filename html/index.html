@@ -41,7 +41,7 @@
      background-color: #f9fbf9;
   }
  .active{
-   background-color: #afdaaf;
+   background-color: #2dd52d !important;
  }
  </style>
 <script type="text/javascript">
@@ -196,7 +196,8 @@ $(function(){
  $("div#iframeheads").delegate('div','click',function(){
     var target=$(this).attr('target');
     $('#iframerow_' + target).show();
-    //$(this).addClass('active');
+    $(this).addClass('active');
+    $(this).siblings().removeClass('active')
     $('#iframerow_' + target).siblings('.iframe-row').hide();
  });
  $("div#iframeheads").delegate('span.ui-icon-closethick','click',function(event){
