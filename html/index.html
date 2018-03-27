@@ -163,7 +163,14 @@ $(function(){
     }
     $('#iframerow_' + target).show();
     $('#iframerow_' + target).siblings().hide();
+    var width=$('.ui-layout-center').width();
+    $('.ui-layout-center').find('iframe').width(width);
  });
+ $('.ui-layout-center').resize(function(){
+    var width=$('.ui-layout-center').width();
+    $('.ui-layout-center').find('iframe').width(width);
+ });
+ 
 });
 </script>
 
