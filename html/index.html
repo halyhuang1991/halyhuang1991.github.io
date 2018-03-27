@@ -26,8 +26,17 @@
   
  }
  #iframeheads div:hover{
-    background-color:#d3ded3
+     background-color:#d3ded3
  }
+ #iframeheads div{
+     float:left;
+     cursor: pointer;
+     text-align:center;
+     color: #9c9494;
+     display:block;
+     margin-right: 10px;
+     background-color: #f9fbf9;
+  }
  </style>
 <script type="text/javascript">
  var j = jQuery.noConflict();
@@ -165,7 +174,7 @@ $(function(){
       $("div#iframerows").append(html);
      //---------------------------------------------
       var title=$(this).find("div.text").attr('title');
-      var head="<div class='text' target='"+target+"' style='float:left;cursor: pointer;text-align:center;color: #9c9494;display:block;margin-right: 10px;background-color: #f9fbf9;'>"+title+"<span class='ui-icon 	ui-icon-closethick'></span></div>";
+      var head="<div class='text' target='"+target+"' >"+title+"<span class='ui-icon 	ui-icon-closethick'></span></div>";
       $("div#iframeheads").append(head);
     }
     $('#iframerow_' + target).show();
