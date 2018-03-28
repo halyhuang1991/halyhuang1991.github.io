@@ -182,7 +182,7 @@ $(function(){
   });
   
  })
- $("#txt").ajaxStart(function(){
+ $(document).ajaxStart(function(){
    $('body').mask("Processing, Please wait...");
 });
  $(document).ajaxComplete(function(){
