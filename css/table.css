@@ -4,7 +4,7 @@ table{
 }
 table tr{
         height:      30px;  
-	background-color: #e7ddd1;
+	    background-color: #e7ddd1;
     }
 table tr{
         height:      30px;      
@@ -16,7 +16,7 @@ td {
     white-space: nowrap;
 }
 	tr:first-child	{
-	    font-weight: bold;
+	        font-weight: bold;
             text-align: center;
             border: 1px solid #c0c0c0; /*border-top: 1px solid #AED0EA;/*#125088*/
             background-color: #ad8c6b;
