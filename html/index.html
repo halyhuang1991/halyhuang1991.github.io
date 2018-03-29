@@ -252,7 +252,7 @@ $(function(){
     $(this).parent().remove();
     $('#iframerow_' + target).remove();
     if($("div#iframeheads").find('div').length>0){
-      $("div#iframeheads").find('div').eq(0).trigger('click');
+      $("div#iframeheads").find('div').last().trigger('click');
     };
     return false;
  });
