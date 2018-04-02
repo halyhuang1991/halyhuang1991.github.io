@@ -216,7 +216,7 @@ $(function(){
  $.getJSON('../data/json/pages.json',function(data){
   data.forEach(function(x){
    if(x.part=='test'){
-      var html='<li class="menu_row" style="width:98%;height:10px"><div class="form" style="width:98%;height:98%"><div class="text" title="'+x.title+'" target="'+x.target+'"><span class="ui-icon ui-icon-arrowthick-1-e"></span>'+x.title+'</div></div></li>';
+      var html='<li class="menu_row" style="width:98%;height:10px"><div class="form" style="width:98%;height:98%"><div class="text" title="'+x.title+'" target="'+x.target+'" url="'+x.url+'"><span class="ui-icon ui-icon-arrowthick-1-e"></span>'+x.title+'</div></div></li>';
       if($('#accordion #'+x.part).find('ul').length>0){
         $('#accordion #'+x.part).find('ul').eq(0).append(html);
       }
@@ -235,12 +235,13 @@ $(function(){
   });
  $("#accordion").delegate("div.form","click",function(){
     var target=$(this).find("div.text").attr('target');
-    
+    var url=$(this).find("div.text").attr('url');
     if($("div#iframerows").find('#iframerow_' + target).length==0){
-      var html= "<div id='iframerow_" + target + "' class='iframe-row'><iframe target='" + target + "' title='test' src='../index.html?menuid="+target+"' frameborder='no' border='0'></iframe></div>";
+      var html= "<div id='iframerow_" + target + "' class='iframe-row'><iframe target='" + target + "' title='test' src='"+url+"?menuid="+target+"' frameborder='no' border='0'></iframe></div>";
       $("div#iframerows").append(html);
      //---------------------------------------------
       var title=$(this).find("div.text").attr('title');
+     
       var head="<div class='text' target='"+target+"' >"+title+"<span class='ui-icon 	ui-icon-closethick'></span></div>";
       $("div#iframeheads").append(head);
       $("div#iframeheads").find('div[target="'+target+'"]').addClass('active');
