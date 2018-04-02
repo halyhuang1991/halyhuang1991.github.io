@@ -66,3 +66,33 @@ input[type="button"], input[type="submit"] {
     input[type="button"]:active, input[type="submit"]:active {
         background-position-y: -0px !important;
     }
+    input[type="button"].xbutton, input[type="submit"].xbutton {
+        border: 1px solid #cdcdcd;
+    }
+    
+    #btnCancel.xbutton, input.btnCancel.xbutton {
+        background: url("/images/btnCancel.png") no-repeat left -44px;
+    }
+    
+    #btnDelete.xbutton, input.btnDelete.xbutton, #btnClose.xbutton, input.btnClose.xbutton {
+        background: url("/images/btnDelete.png") no-repeat left -44px;
+    }
+    
+    #btnEdit.xbutton, input.btnEdit.xbutton {
+        background: url("/images/btnEdit.png") no-repeat left -44px;
+    }
+    
+    #btnQuery.xbutton, input.btnQuery.xbutton {
+        background: url("/images/btnQuery.png") no-repeat left -44px;
+    }
+    #btnSearch.xbutton, input.btnSearch.xbutton {
+        background: url("/images/btnQuery.png") no-repeat left -44px;
+    }
+    
+    #btnSubmit.xbutton, input.btnSubmit.xbutton, #btnSave.xbutton, input.btnSave.xbutton {
+        background: url("/images/btnSubmit.png") no-repeat left -44px;
+    }
+    
+    #btnAdd.xbutton, input.btnAdd.xbutton {
+        background: url("/images/btnAdd.png") no-repeat left -44px;
+    }
