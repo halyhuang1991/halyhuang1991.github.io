@@ -22,6 +22,24 @@
 </head>
 <body>
 <div id='table'>
+        <div id="conditions" style="display: inline;">
+            <div id="row" style="width: 143px;float: left;margin-right: 10px;">
+                <div id="text" style="text-align: center;background-color: #cfc7c7;width: 149px;height:16px">
+                    name</div>
+                <input id="name" style="width: 143px;" type="text" />
+            </div>
+            <div id="row" style="width: 143px;float: left;margin-right: 10px;">
+                <div id="text" style="text-align: center;background-color: #cfc7c7;width: 149px;height:16px">
+                    path</div>
+                <input id="path"  style="width: 143px;" type="text"/>
+            </div>
+            <div id="row" style="width: 100px;float: left;margin-right: 10px;">
+                    <div id="text" style="width: 100px;height:16px">
+                        </div>
+                    <input id="btnSearch" value="Search" type="button" v-on:click="Search"/>
+                </div>
+        </div>
+        <div class="clear"></div>
         <table border="1" style="border-collapse: collapse">
             <tr class="table_head">
                 <td>seq.</td>
@@ -57,6 +75,16 @@ $(function(){
                         $('#dialog').dialog("option","title", item.name.split('.')[0]).dialog('open');
                         $('#dialog').attr("title",item.name.split('.')[0]);
                     });
+
+                },
+                Search:function(){
+                    var arr=txt.$data.list;
+                    function f(item){
+                        var name=$("#table").find("#name").val();
+                        var path=$("#table").find("#path").val();
+                        return item.name.index(name)>=0||item.path.index(path)>=0;
+                    };
+                    txt.$data.list=arr.filter(f);
 
                 }
             }

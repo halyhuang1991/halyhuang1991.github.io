@@ -252,6 +252,8 @@ $(function(){
     $('#iframerow_' + target).siblings('.iframe-row').hide();
     var width=$('.ui-layout-center').width();
     $('.ui-layout-center').find('iframe').width(width);
+    var height=$('.ui-layout-center').height();
+    $('.ui-layout-center').find('iframe').height(height);
  });
  $('.ui-layout-center').resize(function(){
     var width=$('.ui-layout-center').width();
