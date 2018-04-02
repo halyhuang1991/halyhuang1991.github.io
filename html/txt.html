@@ -79,9 +79,24 @@ $(function(){
                 },
                 Search:function(){
                     function f(item){
-                            var name=$("#table").find("#name").val();
-                            var path=$("#table").find("#path").val();
-                            return item.name.indexOf(name)>=0||item.path.indexOf(path)>=0;
+                            var name=$.trim($("#table").find("#name").val());
+                            var path=$.trim($("#table").find("#path").val());
+                            var ret=false;
+                            if(name!="")
+                            {
+                                if(item.name.indexOf(name)>=0)
+                                {
+                                    ret=true;
+                                }
+                            }
+                            if(path!="")
+                            {
+                                if(item.path.indexOf(path)>=0)
+                                {
+                                    ret=true;
+                                }
+                            }
+                            return ret;
                         };
                     $.getJSON("../data/json/data.json",function(data){
                         var arr=data;
