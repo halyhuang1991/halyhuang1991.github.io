@@ -84,8 +84,8 @@ $(function(){
                             return item.name.indexOf(name)>=0||item.path.indexOf(path)>=0;
                         };
                     $.getJSON("../data/json/data.json",function(data){
-                        var arr=this.list;
-                        this.list=arr.filter(f);
+                        var arr=data;
+                        txt.$data.list=arr.filter(f);
                     })
                     
 
