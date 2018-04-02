@@ -49,6 +49,9 @@
      height: 20px;
      overflow: hidden;
   }
+  iframe{
+    min-height:345px;
+  }
  #iframeheads span.ui-icon.ui-icon-closethick{
    margin-right: 1px;
    margin-left: 2px;
@@ -253,8 +256,8 @@ $(function(){
     $('#iframerow_' + target).siblings('.iframe-row').hide();
     var width=$('.ui-layout-center').width();
     $('.ui-layout-center').find('iframe').width(width);
-    var height=$('.ui-layout-center').height();
-    $('.ui-layout-center').find('iframe').height(height);
+    // var height=$('.ui-layout-center').height();
+    // $('.ui-layout-center').find('iframe').height(height);
  });
  $('.ui-layout-center').resize(function(){
     var width=$('.ui-layout-center').width();
