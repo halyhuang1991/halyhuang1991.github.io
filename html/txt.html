@@ -36,7 +36,7 @@
             <div id="row" style="width: 143px;float: left;margin-right: 10px;">
                     <div id="text" style="text-align: center;background-color: #cfc7c7;width: 153px;height:16px">
                         text</div>
-                    <input id="text"  style="width: 143px;" type="text"/>
+                    <input id="txttext"  style="width: 143px;" type="text"/>
                 </div>
             <div id="row" style="width: 100px;float: left;margin-right: 10px;">
                     <div id="text" style="width: 100px;height:16px">
@@ -86,7 +86,7 @@ $(function(){
                     function f(item){
                             var name=$.trim($("#table").find("#name").val());
                             var path=$.trim($("#table").find("#path").val());
-                            var text=$.trim($("#table").find("#text").val());
+                            var text=$.trim($("#table").find("#txttext").val());
                             var ret=true;
                             if(name!="")
                             {
@@ -109,6 +109,7 @@ $(function(){
                                     ret=false;
                                 }
                             }
+                            if(path==""&&text==""&&name=="")ret=false;
                             return !ret;
                         };
                     $.getJSON("../data/json/data.json",function(data){
