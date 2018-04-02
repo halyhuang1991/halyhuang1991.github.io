@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<link href='../css/global.css' rel="stylesheet" />
+<link href='../css/table.css' rel="stylesheet" />
+<link href='../script/jquery-loadmask/jquery.loadmask.css' rel="stylesheet" />
+<link href='../css/jquery-ui.min.css' rel="stylesheet" />
+<script src="../jquery.min.js"></script>
+<script src="/vue.min.js"></script>
+<script src="../script/jquery-ui.min.js"></script>
+<script src="../script/jquery-loadmask/jquery.loadmask.js"></script>
+<style>
+    #txtbody{
+        text-align: center
+    }
+</style>
+</head>
+<body>
+<div id='table'>
+        <table border="1" style="border-collapse: collapse">
+                <tr class="table_head">
+                <td>seq.</td>
+                <td>name</td>
+                <td>path</td>
+            </tr>
+            <tr v-cloak v-for="(item, index) of list" v-on:click="loadtxt(item,$event)">
+                <td>{{index+1}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.path}}</td>
+            </tr>
+    </table>
+</div>
+<div id='dialog' style='display:none'>
+<div id="txtbody" ></div>
+</div>
+<script>
+$(function(){
+    $('#dialog').dialog({autoOpen: false,width:500,modal: true});
+    var ls;
+    $.getJSON("../data/json/data.json",function(data){
+        ls=data;
+        var txt=new Vue({
+            el:"#table",
+            data:{
+                list:ls
+            },
+            methods:{
+                loadtxt:function(item,event){
+                    var el = event.currentTarget;
+                    console.log(item);
+                    $("#txtbody").load(item.path,function(){
+                        $('#dialog').dialog('open');
+                    });
+
+                }
+            }
+        });
+
+    });
+
+})
+
+
+</script>
+</body>
+</html>
