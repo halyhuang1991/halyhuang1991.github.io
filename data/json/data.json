@@ -1,9 +1,1 @@
-[{
-    "name": "test.txt",
-    "text": "this is a txt file<br/>ok!",
-    "path": "/data/txt/test.txt"
-}, {
-    "name": "two.txt",
-    "text": "this is test two!<br/>ok!<br/>p",
-    "path": "/data/txt/two.txt"
-}]
+[{"name": "one.txt", "path": "/data/txt/one.txt", "text": "this is a test<br/><br/>ok!<br/><br/>ok2!"}, {"name": "test.txt", "path": "/data/txt/test.txt", "text": "this is a txt file<br/>ok!"}, {"name": "two.txt", "path": "/data/txt/two.txt", "text": "this is test two!<br/>ok!<br/>p"}]
