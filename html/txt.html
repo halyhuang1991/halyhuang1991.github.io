@@ -33,6 +33,11 @@
                     path</div>
                 <input id="path"  style="width: 143px;" type="text"/>
             </div>
+            <div id="row" style="width: 143px;float: left;margin-right: 10px;">
+                    <div id="text" style="text-align: center;background-color: #cfc7c7;width: 153px;height:16px">
+                        text</div>
+                    <input id="text"  style="width: 143px;" type="text"/>
+                </div>
             <div id="row" style="width: 100px;float: left;margin-right: 10px;">
                     <div id="text" style="width: 100px;height:16px">
                         </div>
@@ -81,22 +86,30 @@ $(function(){
                     function f(item){
                             var name=$.trim($("#table").find("#name").val());
                             var path=$.trim($("#table").find("#path").val());
-                            var ret=false;
+                            var text=$.trim($("#table").find("#text").val());
+                            var ret=true;
                             if(name!="")
                             {
                                 if(item.name.indexOf(name)>=0)
                                 {
-                                    ret=true;
+                                    ret=false;
                                 }
                             }
                             if(path!="")
                             {
                                 if(item.path.indexOf(path)>=0)
                                 {
-                                    ret=true;
+                                    ret=false;
                                 }
                             }
-                            return ret;
+                            if(text!="")
+                            {
+                                if(item.text.indexOf(text)>=0)
+                                {
+                                    ret=false;
+                                }
+                            }
+                            return !ret;
                         };
                     $.getJSON("../data/json/data.json",function(data){
                         var arr=data;
