@@ -1,9 +1,9 @@
 [{
-    "text": "this is a txt file\nok!",
-    "path": "/data/txt/test.txt",
-    "name": "test.txt"
+    "name": "test.txt",
+    "text": "this is a txt file<br/>ok!",
+    "path": "/data/txt/test.txt"
 }, {
-    "text": "this is test two!\nok!\np",
-    "path": "/data/txt/two.txt",
-    "name": "two.txt"
+    "name": "two.txt",
+    "text": "this is test two!<br/>ok!<br/>p",
+    "path": "/data/txt/two.txt"
 }]
