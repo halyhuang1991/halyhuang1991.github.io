@@ -24,12 +24,12 @@
 <div id='table'>
         <div id="conditions" style="display: inline;">
             <div id="row" style="width: 143px;float: left;margin-right: 10px;">
-                <div id="text" style="text-align: center;background-color: #cfc7c7;width: 149px;height:16px">
+                <div id="text" style="text-align: center;background-color: #cfc7c7;width: 153px;height:16px">
                     name</div>
                 <input id="name" style="width: 143px;" type="text" />
             </div>
             <div id="row" style="width: 143px;float: left;margin-right: 10px;">
-                <div id="text" style="text-align: center;background-color: #cfc7c7;width: 149px;height:16px">
+                <div id="text" style="text-align: center;background-color: #cfc7c7;width: 153px;height:16px">
                     path</div>
                 <input id="path"  style="width: 143px;" type="text"/>
             </div>
@@ -78,13 +78,16 @@ $(function(){
 
                 },
                 Search:function(){
-                    var arr=txt.$data.list;
                     function f(item){
-                        var name=$("#table").find("#name").val();
-                        var path=$("#table").find("#path").val();
-                        return item.name.index(name)>=0||item.path.index(path)>=0;
-                    };
-                    txt.$data.list=arr.filter(f);
+                            var name=$("#table").find("#name").val();
+                            var path=$("#table").find("#path").val();
+                            return item.name.indexOf(name)>=0||item.path.indexOf(path)>=0;
+                        };
+                    $.getJSON("../data/json/data.json",function(data){
+                        var arr=this.list;
+                        this.list=arr.filter(f);
+                    })
+                    
 
                 }
             }
