@@ -1,13 +1,13 @@
 [{
-    "name": "one.txt",
-    "text": "this is a test<br/><br/>ok!<br/><br/>ok2!",
-    "path": "/data/txt/one.txt"
+    "path": "/data/txt/one.txt",
+    "text": "is a test<br/> ok! <br/>ok2! this",
+    "name": "one.txt"
 }, {
-    "name": "test.txt",
-    "text": "this is a txt file<br/>ok!",
-    "path": "/data/txt/test.txt"
+    "path": "/data/txt/test.txt",
+    "text": "file ok! is a txt this",
+    "name": "test.txt"
 }, {
-    "name": "two.txt",
-    "text": "this is test two!<br/>ok!<br/>p",
-    "path": "/data/txt/two.txt"
+    "path": "/data/txt/two.txt",
+    "text": "is two! ok! p test this",
+    "name": "two.txt"
 }]
