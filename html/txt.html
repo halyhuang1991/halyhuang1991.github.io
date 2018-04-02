@@ -52,6 +52,7 @@ $(function(){
                     console.log(item);
                     $("#txtbody").load(item.path,function(){
                         $('#dialog').dialog('open');
+                        $('#dialog').attr("title",item.name.split('.')[0]);
                     });
 
                 }
