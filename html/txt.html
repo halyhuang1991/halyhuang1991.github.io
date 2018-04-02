@@ -51,7 +51,7 @@ $(function(){
                     var el = event.currentTarget;
                     console.log(item);
                     $("#txtbody").load(item.path,function(){
-                        $('#dialog').dialog('open');
+                        $('#dialog').dialog("option","title", item.name.split('.')[0]).dialog('open');
                         $('#dialog').attr("title",item.name.split('.')[0]);
                     });
 

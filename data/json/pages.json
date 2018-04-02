@@ -9,7 +9,7 @@
             {
                 "title": "txt",
                 "refer": "html",
-                "url":"../html/txt.html",
+                "url":"./txt.html",
                 "target": 4,
                 "part":"test"
             }
