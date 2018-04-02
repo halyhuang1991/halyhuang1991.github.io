@@ -15,12 +15,15 @@
     #txtbody{
         text-align: center
     }
+    div#table table tr:not(:eq(0)){
+            cursor: pointer;
+    }
 </style>
 </head>
 <body>
 <div id='table'>
         <table border="1" style="border-collapse: collapse">
-                <tr class="table_head">
+            <tr class="table_head">
                 <td>seq.</td>
                 <td>name</td>
                 <td>path</td>
