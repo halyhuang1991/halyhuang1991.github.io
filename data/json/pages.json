@@ -7,7 +7,7 @@
                 "part":"test"
             },
             {
-                "title": "index",
+                "title": "txt",
                 "refer": "html",
                 "url":"../html/txt.html",
                 "target": 4,
