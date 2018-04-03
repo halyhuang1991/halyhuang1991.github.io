@@ -236,12 +236,15 @@ $(function(){
   });
   
  })
+ //=============================================================================
+ $("div.ui-layout-north.ui-layout-pane.ui-layout-pane-north.open").css("height","");
  $(document).ajaxStart(function(){
    //$('body').mask("Processing, Please wait...");
 });
  $(document).ajaxComplete(function(){
      //$('body').unmask();
   });
+//==================================================================================
  $("#accordion").delegate("div.form","click",function(){
     var target=$(this).find("div.text").attr('target');
     var url=$(this).find("div.text").attr('url');
