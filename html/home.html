@@ -45,6 +45,7 @@ body {
     padding: 0px 0px;
     line-height: 20px;
 }
+
 #center h1{
     display: block;
     color: #555;
@@ -76,6 +77,19 @@ body {
     left: 0;
 }
 </style>
+<script>
+    $(function(){
+        $('div.left').find('#tab-menu li').eq(0).click(function(){
+
+        })
+        $('div.left').find('#tab-menu li').eq(1).click(function(){
+            location.href="./index.html";
+        })
+        $('div.left').find('#tab-menu li').eq(2).click(function(){
+            location.href="mailto:halyhuang1991@outlook.com?subject=hello%20Word!";
+        })
+    })
+</script>
 </head>
 <body>
         <div id="container">
@@ -93,8 +107,8 @@ body {
                     <div id='center'>
                         <h1>The home</h1>
                         
-                        <div >
-                            <span>Welcome</span>
+                        <div style="display: flex;">
+                            <span>Welcome Back!</span>
                         </div>
                     </div>
                     <div id="right"></div>
@@ -107,10 +121,18 @@ body {
                   <div id="copyright">
                     <p>© Copyright <script type="text/javascript">
          
-                    var d = new Date()
-                    document.write(d.getFullYear())
+                    var d = new Date();
+                    var m=d.getMonth()+1;
+                    if(m<10){
+                        m="0"+m;
+                    }
+                    var day=d.getDate();
+                    if(day<10){
+                        day="0"+day;
+                    }
+                    document.write(d.getFullYear()+'-'+m+'-'+day)
                    
-                    </script>2018 </p>
+                    </script></p>
                   </div>
           
                   <!-- <p id="back-top"><a href="#top" class="tip_top" title="back to top">top ↑</a></p> -->
